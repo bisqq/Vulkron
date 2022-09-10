@@ -196,8 +196,7 @@ typedef struct VulkronDeviceCreateInfo {
 	VulkronQueueFlag						transferQueueFlag;
 	uint32_t								transferQueueCount;
 	VulkronGpuFeatures						gpuEnabledFeatures;
-	VkPhysicalDevice*						pGpu;
-	uint32_t								gpuCount;
+	std::vector<VkPhysicalDevice>			gpuList;
 } VulkronDeviceCreateInfo;
 
 typedef struct VulkronSwapchainCreateInfo {

@@ -22,14 +22,14 @@ VulkronResult vulkronCreateDevice(VulkronDeviceCreateInfo* info) {
         return VULKRON_ERROR_MEMORY_ALLOCATE;
     }
 
-    if (nullptr == device->pGpu || device->gpuCount == 0) {
+    if (nullptr == device->gpuList.data() || device->gpuList.size() == 0) {
         return VULKRON_ERROR_INVALID_ARGUMENT;
     }
 
-    if (nullptr != device->pGpu && device->gpuCount == 1) {
+    if (nullptr != device->gpuList.data() && device->gpuList.size() == 1) {
         userPickGpu();
     }
-    else if (nullptr != device->pGpu) {
+    else if (nullptr != device->gpuList.data()) {
         pickMostEfficientGpu();
     }
 
