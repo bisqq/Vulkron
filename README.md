@@ -28,7 +28,7 @@ The structure works up to submitting command buffers, at the moment I am current
 ### Code
 
 ```C++
-#include "VulkronCore"
+#include "Vulkron.h"
 #include "Glfw/glfw3.h"
 
 #include <Windows.h> // for console
