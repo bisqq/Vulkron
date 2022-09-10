@@ -7,9 +7,15 @@ Vulkron is an abstraction of Vulkan in C++. As mentioned in the main [repository
 Vulkron is also going to be written in a way were we can export it as a dll/lib file (for future use).
 
 ## Current Setup
-The structure works up to submitting command buffers, at the moment I am currently working on the buffers. 
+The structure works up to submitting command buffers, at the moment I am currently working on the buffers. Although you can set it up to get a red flickering screen.
 
-Although you can set it up like so to get a red flickering screen:
+### Required Libraries
+- Vulkan
+- Glfw
+- GLM
+
+### Code
+
 ```C++
 #include "VulkronCore"
 #include "Glfw/glfw3.h"
