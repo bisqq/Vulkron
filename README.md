@@ -6,6 +6,13 @@ Vulkron is an abstraction of Vulkan in C++. As mentioned in the main [repository
 
 Vulkron is also going to be written in a way were we can export it as a dll/lib file (for future use).
 
+## Vulkron Features
+- Easy renderer implementation
+- Get all GPU Details and Info
+- Simple Pipeline Creation
+- MultiThreading Command Buffers [(view architecture here)](https://user-images.githubusercontent.com/29154540/189501445-669c7d73-5685-4360-81c7-384134238d5b.jpg)
+- Multiple Subpasses (to be added)
+
 ## Current Setup
 The structure works up to submitting command buffers, at the moment I am currently working on the buffers. Although you can set it up to get a red flickering screen.
 
