@@ -54,13 +54,13 @@ static void userPickGpu() {
 
     // get selected gpu features geometry shader to make sure application runs
     VkPhysicalDeviceFeatures gpuFeatures;
-    vkGetPhysicalDeviceFeatures(device->pGpu[0], &gpuFeatures);
+    vkGetPhysicalDeviceFeatures(device->gpuList.at(0), &gpuFeatures);
 
     if (!gpuFeatures.geometryShader) {
         throw std::runtime_error("Gpu doesn't support geometry shaders");
     }
 
-    deviceInternal->gpu = device->pGpu[0];
+    deviceInternal->gpu = device->gpuList.at(0);
 
     getGpuProperties();
 }
@@ -69,9 +69,9 @@ static void pickMostEfficientGpu() {
 
     std::multimap<int, VkPhysicalDevice> candidates;
 
-    for (uint32_t i = 0; i < device->gpuCount; i++) {
-        uint32_t score = rateGpuSuitability(device->pGpu[i]);
-        candidates.insert(std::make_pair(score, device->pGpu[i]));
+    for (auto gpu : device->gpuList) {
+        uint32_t score = rateGpuSuitability(gpu);
+        candidates.insert(std::make_pair(score, gpu));
     }
 
     // Check if the best candidate is suitable at all
