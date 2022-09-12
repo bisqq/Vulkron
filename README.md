@@ -223,7 +223,6 @@ void shutdownGlfw() {
 	glfwDestroyWindow(window);
 	glfwTerminate();
 }
-}
 
 ```
 
