@@ -1,4 +1,4 @@
-![](https://badgen.net/badge/License/EULA/yellow?icon=github)
+<!-- ![](https://badgen.net/badge/License/EULA/yellow?icon=github) -->
 ![](https://badgen.net/badge/Version/0.0.1/green?icon=github)
 
 # Introduction
